@@ -1,0 +1,2372 @@
+[
+  {
+    "sha": "9fb3ee1a53f26909a14090a7f7fc70bf149a670e",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6OWZiM2VlMWE1M2YyNjkwOWExNDA5MGE3ZjdmYzcwYmYxNDlhNjcwZQ==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:23:59Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:39:06Z"
+      },
+      "message": "ghdlsynth: never display a foreign module as pure vhdl\n\n(do not try to display the original entity when this is none)",
+      "tree": {
+        "sha": "2b3bffdf14426aaf9357cadb1b10f79bab5d937c",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/2b3bffdf14426aaf9357cadb1b10f79bab5d937c"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/9fb3ee1a53f26909a14090a7f7fc70bf149a670e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/9fb3ee1a53f26909a14090a7f7fc70bf149a670e",
+    "html_url": "https://github.com/ghdl/ghdl/commit/9fb3ee1a53f26909a14090a7f7fc70bf149a670e",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/9fb3ee1a53f26909a14090a7f7fc70bf149a670e/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "199dd673c7c68c40f0ab672869a8b8b04c349860",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/199dd673c7c68c40f0ab672869a8b8b04c349860",
+        "html_url": "https://github.com/ghdl/ghdl/commit/199dd673c7c68c40f0ab672869a8b8b04c349860"
+      }
+    ]
+  },
+  {
+    "sha": "199dd673c7c68c40f0ab672869a8b8b04c349860",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6MTk5ZGQ2NzNjN2M2OGM0MGYwYWI2NzI4NjlhOGI4YjA0YzM0OTg2MA==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:23:34Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:39:06Z"
+      },
+      "message": "doc: document --out=verilog for synth",
+      "tree": {
+        "sha": "8233c8c95fc710eb71c124275533acaf0024aa7b",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/8233c8c95fc710eb71c124275533acaf0024aa7b"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/199dd673c7c68c40f0ab672869a8b8b04c349860",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/199dd673c7c68c40f0ab672869a8b8b04c349860",
+    "html_url": "https://github.com/ghdl/ghdl/commit/199dd673c7c68c40f0ab672869a8b8b04c349860",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/199dd673c7c68c40f0ab672869a8b8b04c349860/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+        "html_url": "https://github.com/ghdl/ghdl/commit/6bc0f927f803debc51d5bb9bed46cf18b5a0435c"
+      }
+    ]
+  },
+  {
+    "sha": "6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NmJjMGY5MjdmODAzZGViYzUxZDViYjliZWQ0NmNmMThiNWEwNDM1Yw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:21:28Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T19:39:05Z"
+      },
+      "message": "synth: add verilog output",
+      "tree": {
+        "sha": "8f44b0003de36cd75ab1444196ea7eadc81aa626",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/8f44b0003de36cd75ab1444196ea7eadc81aa626"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+    "html_url": "https://github.com/ghdl/ghdl/commit/6bc0f927f803debc51d5bb9bed46cf18b5a0435c",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/6bc0f927f803debc51d5bb9bed46cf18b5a0435c/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+        "html_url": "https://github.com/ghdl/ghdl/commit/4f7aaa50f93b667aee662de5f9308545bb00a5f2"
+      }
+    ]
+  },
+  {
+    "sha": "4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NGY3YWFhNTBmOTNiNjY3YWVlNjYyZGU1ZjkzMDg1NDViYjAwYTVmMg==",
+    "commit": {
+      "author": {
+        "name": "Martin Bahlinger",
+        "email": "martin.bahlinger@leica-geosystems.com",
+        "date": "2021-04-27T20:42:53Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-28T19:37:52Z"
+      },
+      "message": "Increase stack size to 8MB for msys2-mcode (fix ghdl/ghdl#1742)",
+      "tree": {
+        "sha": "2dea64f2d93b1c4185d7385b34b0a2dac625993c",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/2dea64f2d93b1c4185d7385b34b0a2dac625993c"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+    "html_url": "https://github.com/ghdl/ghdl/commit/4f7aaa50f93b667aee662de5f9308545bb00a5f2",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/4f7aaa50f93b667aee662de5f9308545bb00a5f2/comments",
+    "author": {
+      "login": "bahm-lgs",
+      "id": 36985692,
+      "node_id": "MDQ6VXNlcjM2OTg1Njky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36985692?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/bahm-lgs",
+      "html_url": "https://github.com/bahm-lgs",
+      "followers_url": "https://api.github.com/users/bahm-lgs/followers",
+      "following_url": "https://api.github.com/users/bahm-lgs/following{/other_user}",
+      "gists_url": "https://api.github.com/users/bahm-lgs/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/bahm-lgs/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/bahm-lgs/subscriptions",
+      "organizations_url": "https://api.github.com/users/bahm-lgs/orgs",
+      "repos_url": "https://api.github.com/users/bahm-lgs/repos",
+      "events_url": "https://api.github.com/users/bahm-lgs/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/bahm-lgs/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e3a82f2e6894155cc030680332f31db6f79aba28",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/e3a82f2e6894155cc030680332f31db6f79aba28",
+        "html_url": "https://github.com/ghdl/ghdl/commit/e3a82f2e6894155cc030680332f31db6f79aba28"
+      }
+    ]
+  },
+  {
+    "sha": "e3a82f2e6894155cc030680332f31db6f79aba28",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZTNhODJmMmU2ODk0MTU1Y2MwMzA2ODAzMzJmMzFkYjZmNzlhYmEyOA==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T15:37:26Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-28T15:37:26Z"
+      },
+      "message": "synth: file renaming for decls, expr, insts and stmts.",
+      "tree": {
+        "sha": "664593aa4fbb76c2f8c8a38d13d31b9335f99472",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/664593aa4fbb76c2f8c8a38d13d31b9335f99472"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/e3a82f2e6894155cc030680332f31db6f79aba28",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/e3a82f2e6894155cc030680332f31db6f79aba28",
+    "html_url": "https://github.com/ghdl/ghdl/commit/e3a82f2e6894155cc030680332f31db6f79aba28",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/e3a82f2e6894155cc030680332f31db6f79aba28/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a7334f5837fcc417173254707bc8acfc84120b47",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/a7334f5837fcc417173254707bc8acfc84120b47",
+        "html_url": "https://github.com/ghdl/ghdl/commit/a7334f5837fcc417173254707bc8acfc84120b47"
+      }
+    ]
+  },
+  {
+    "sha": "a7334f5837fcc417173254707bc8acfc84120b47",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6YTczMzRmNTgzN2ZjYzQxNzE3MzI1NDcwN2JjOGFjZmM4NDEyMGI0Nw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:17:22Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:17:22Z"
+      },
+      "message": "ghwdump: display help for -h or --help",
+      "tree": {
+        "sha": "548b217308aa5c99a3abacae491aee13ff04cac6",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/548b217308aa5c99a3abacae491aee13ff04cac6"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/a7334f5837fcc417173254707bc8acfc84120b47",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/a7334f5837fcc417173254707bc8acfc84120b47",
+    "html_url": "https://github.com/ghdl/ghdl/commit/a7334f5837fcc417173254707bc8acfc84120b47",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/a7334f5837fcc417173254707bc8acfc84120b47/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+        "html_url": "https://github.com/ghdl/ghdl/commit/94d4ef5976f9bd15e4253200b0577a7a86e0bc22"
+      }
+    ]
+  },
+  {
+    "sha": "94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6OTRkNGVmNTk3NmY5YmQxNWU0MjUzMjAwYjA1NzdhN2E4NmUwYmMyMg==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T04:58:02Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:14:35Z"
+      },
+      "message": "synth: use a generic version of synth-environment.",
+      "tree": {
+        "sha": "5ea06b5fcef250fd98efd896e2a6ae5fc7048a21",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/5ea06b5fcef250fd98efd896e2a6ae5fc7048a21"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+    "html_url": "https://github.com/ghdl/ghdl/commit/94d4ef5976f9bd15e4253200b0577a7a86e0bc22",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/94d4ef5976f9bd15e4253200b0577a7a86e0bc22/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+        "html_url": "https://github.com/ghdl/ghdl/commit/f5715a802c157614b6cd9ad4f0195ce77cbd0997"
+      }
+    ]
+  },
+  {
+    "sha": "f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZjU3MTVhODAyYzE1NzYxNGI2Y2Q5YWQ0ZjAxOTVjZTc3Y2JkMDk5Nw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T04:17:53Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:14:35Z"
+      },
+      "message": "Makefile.in: remove circular reference for ghwdump on Linux",
+      "tree": {
+        "sha": "58e34ad613a68c9011a50b22ac2b5e1e4ee8380e",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/58e34ad613a68c9011a50b22ac2b5e1e4ee8380e"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+    "html_url": "https://github.com/ghdl/ghdl/commit/f5715a802c157614b6cd9ad4f0195ce77cbd0997",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/f5715a802c157614b6cd9ad4f0195ce77cbd0997/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+        "html_url": "https://github.com/ghdl/ghdl/commit/ae58c771be46cbe9e7a9fe85677a3cf04f605afc"
+      }
+    ]
+  },
+  {
+    "sha": "ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6YWU1OGM3NzFiZTQ2Y2JlOWU3YTlmZTg1Njc3YTNjZjA0ZjYwNWFmYw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T04:16:47Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:14:34Z"
+      },
+      "message": "testsuite/gna: remove artifact file",
+      "tree": {
+        "sha": "83f8a8c91364b4c4fc8cde3f7e710f8e5399e597",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/83f8a8c91364b4c4fc8cde3f7e710f8e5399e597"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+    "html_url": "https://github.com/ghdl/ghdl/commit/ae58c771be46cbe9e7a9fe85677a3cf04f605afc",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/ae58c771be46cbe9e7a9fe85677a3cf04f605afc/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a1ad6aaf18edd20bbcae1951559437a75fad3967",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/a1ad6aaf18edd20bbcae1951559437a75fad3967",
+        "html_url": "https://github.com/ghdl/ghdl/commit/a1ad6aaf18edd20bbcae1951559437a75fad3967"
+      }
+    ]
+  },
+  {
+    "sha": "a1ad6aaf18edd20bbcae1951559437a75fad3967",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6YTFhZDZhYWYxOGVkZDIwYmJjYWUxOTUxNTU5NDM3YTc1ZmFkMzk2Nw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T04:15:26Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:14:33Z"
+      },
+      "message": "testsuite/testenv.sh: Add ghw_dump function\n\nAlso define ghw_dump to have only one function that calls GHWDUMP.",
+      "tree": {
+        "sha": "726e9946cfe28430f8a14cfa18c6edc5cd741064",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/726e9946cfe28430f8a14cfa18c6edc5cd741064"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/a1ad6aaf18edd20bbcae1951559437a75fad3967",
+      "comment_count": 3,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/a1ad6aaf18edd20bbcae1951559437a75fad3967",
+    "html_url": "https://github.com/ghdl/ghdl/commit/a1ad6aaf18edd20bbcae1951559437a75fad3967",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/a1ad6aaf18edd20bbcae1951559437a75fad3967/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e225ca7b99fa12a57ccdc87705a600022a74b207",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/e225ca7b99fa12a57ccdc87705a600022a74b207",
+        "html_url": "https://github.com/ghdl/ghdl/commit/e225ca7b99fa12a57ccdc87705a600022a74b207"
+      }
+    ]
+  },
+  {
+    "sha": "e225ca7b99fa12a57ccdc87705a600022a74b207",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZTIyNWNhN2I5OWZhMTJhNTdjY2RjODc3MDVhNjAwMDIyYTc0YjIwNw==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-23T17:44:14Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-27T19:07:50Z"
+      },
+      "message": "testsuite/synth/aggr01: use synth_tb",
+      "tree": {
+        "sha": "6d4cb90ba42a0efc1e36eec3b732c9f965d6fef8",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/6d4cb90ba42a0efc1e36eec3b732c9f965d6fef8"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/e225ca7b99fa12a57ccdc87705a600022a74b207",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/e225ca7b99fa12a57ccdc87705a600022a74b207",
+    "html_url": "https://github.com/ghdl/ghdl/commit/e225ca7b99fa12a57ccdc87705a600022a74b207",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/e225ca7b99fa12a57ccdc87705a600022a74b207/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+        "html_url": "https://github.com/ghdl/ghdl/commit/9e7d54f0a5816f433f03271ea9f46bc7803e97e2"
+      }
+    ]
+  },
+  {
+    "sha": "9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6OWU3ZDU0ZjBhNTgxNmY0MzNmMDMyNzFlYTlmNDZiYzc4MDNlOTdlMg==",
+    "commit": {
+      "author": {
+        "name": "Xiretza",
+        "email": "xiretza@xiretza.xyz",
+        "date": "2021-04-27T16:15:35Z"
+      },
+      "committer": {
+        "name": "Unai Martinez-Corral",
+        "email": "38422348+umarcor@users.noreply.github.com",
+        "date": "2021-04-27T17:39:03Z"
+      },
+      "message": "testsuite: try to determine ghwdump location automatically",
+      "tree": {
+        "sha": "c5078c948658015209ad0f716b0ff62e36086c76",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/c5078c948658015209ad0f716b0ff62e36086c76"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+    "html_url": "https://github.com/ghdl/ghdl/commit/9e7d54f0a5816f433f03271ea9f46bc7803e97e2",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/9e7d54f0a5816f433f03271ea9f46bc7803e97e2/comments",
+    "author": {
+      "login": "Xiretza",
+      "id": 3107142,
+      "node_id": "MDQ6VXNlcjMxMDcxNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3107142?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiretza",
+      "html_url": "https://github.com/Xiretza",
+      "followers_url": "https://api.github.com/users/Xiretza/followers",
+      "following_url": "https://api.github.com/users/Xiretza/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiretza/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiretza/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiretza/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiretza/orgs",
+      "repos_url": "https://api.github.com/users/Xiretza/repos",
+      "events_url": "https://api.github.com/users/Xiretza/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiretza/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4ca59b2496725c6b45904ce5d5d852e5703adc36",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/4ca59b2496725c6b45904ce5d5d852e5703adc36",
+        "html_url": "https://github.com/ghdl/ghdl/commit/4ca59b2496725c6b45904ce5d5d852e5703adc36"
+      }
+    ]
+  },
+  {
+    "sha": "4ca59b2496725c6b45904ce5d5d852e5703adc36",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NGNhNTliMjQ5NjcyNWM2YjQ1OTA0Y2U1ZDVkODUyZTU3MDNhZGMzNg==",
+    "commit": {
+      "author": {
+        "name": "Xiretza",
+        "email": "xiretza@xiretza.xyz",
+        "date": "2021-04-27T16:15:20Z"
+      },
+      "committer": {
+        "name": "Unai Martinez-Corral",
+        "email": "38422348+umarcor@users.noreply.github.com",
+        "date": "2021-04-27T17:39:03Z"
+      },
+      "message": "testsuite: add die() function",
+      "tree": {
+        "sha": "6a624c00293100152dcddfaa7b2add84d93e71f7",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/6a624c00293100152dcddfaa7b2add84d93e71f7"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/4ca59b2496725c6b45904ce5d5d852e5703adc36",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/4ca59b2496725c6b45904ce5d5d852e5703adc36",
+    "html_url": "https://github.com/ghdl/ghdl/commit/4ca59b2496725c6b45904ce5d5d852e5703adc36",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/4ca59b2496725c6b45904ce5d5d852e5703adc36/comments",
+    "author": {
+      "login": "Xiretza",
+      "id": 3107142,
+      "node_id": "MDQ6VXNlcjMxMDcxNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3107142?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiretza",
+      "html_url": "https://github.com/Xiretza",
+      "followers_url": "https://api.github.com/users/Xiretza/followers",
+      "following_url": "https://api.github.com/users/Xiretza/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiretza/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiretza/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiretza/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiretza/orgs",
+      "repos_url": "https://api.github.com/users/Xiretza/repos",
+      "events_url": "https://api.github.com/users/Xiretza/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiretza/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+        "html_url": "https://github.com/ghdl/ghdl/commit/ccde14e39a92f7a3f7ea738213a48e65454fd1fa"
+      }
+    ]
+  },
+  {
+    "sha": "ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6Y2NkZTE0ZTM5YTkyZjdhM2Y3ZWE3MzgyMTNhNDhlNjU0NTRmZDFmYQ==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-27T16:44:03Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-27T16:45:34Z"
+      },
+      "message": "doc/development/building/LLVM: add 12.0 to the list of supported versions",
+      "tree": {
+        "sha": "44141f20c4a21d8578d922dac85c1948bf6169de",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/44141f20c4a21d8578d922dac85c1948bf6169de"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+    "html_url": "https://github.com/ghdl/ghdl/commit/ccde14e39a92f7a3f7ea738213a48e65454fd1fa",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/ccde14e39a92f7a3f7ea738213a48e65454fd1fa/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2cfa1098070959413f5ed7c32220d9e55262e4e4",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/2cfa1098070959413f5ed7c32220d9e55262e4e4",
+        "html_url": "https://github.com/ghdl/ghdl/commit/2cfa1098070959413f5ed7c32220d9e55262e4e4"
+      }
+    ]
+  },
+  {
+    "sha": "2cfa1098070959413f5ed7c32220d9e55262e4e4",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6MmNmYTEwOTgwNzA5NTk0MTNmNWVkN2MzMjIyMGQ5ZTU1MjYyZTRlNA==",
+    "commit": {
+      "author": {
+        "name": "Jeroen Van den Keybus",
+        "email": "jeroen.vandenkeybus@gmail.com",
+        "date": "2021-04-27T16:40:45Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2021-04-27T16:40:45Z"
+      },
+      "message": "configure: update for LLVM 12.0 (#1747)",
+      "tree": {
+        "sha": "0bcf805d3551e79f7632aa7d3ab6770d3710b57b",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/0bcf805d3551e79f7632aa7d3ab6770d3710b57b"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/2cfa1098070959413f5ed7c32220d9e55262e4e4",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJgiD6NCRBK7hj4Ov3rIwAAoc0IAB4+wiHhkpk+ZvBCAG89nanK\nZBrkYKjYxRtTDAeLC5/3/K2kET+eolR57O7U4d4w3Q42FewVmVTlxd3EWa0kiwNT\nkcLVi+oGIPKRLTnzGFav25aBeh0bR3CRK19jXTxilD5CTZnHVWzoMQdBYCmSKsIn\nG/PkKbzBmQOHB0x5IKm5Kl5eZp9/o899Y6wBncRgftHYA2giysLgAASU/InSaW7P\ng0p8GiXLc1SGr6xGQYJfI6jHLVAIFyTZe0MVzO8mLTe8yVUk+5JCK4rIat5OpSEv\nDGqQomWMGASbVgZeZc11F8xTzl0OTONeyrsZ2V2UPaYcgTAzE4tAs+2stIbf7Sc=\n=oU8m\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 0bcf805d3551e79f7632aa7d3ab6770d3710b57b\nparent 396eb764f49666616063d4239df83b5aed961fff\nauthor Jeroen Van den Keybus <jeroen.vandenkeybus@gmail.com> 1619541645 +0200\ncommitter GitHub <noreply@github.com> 1619541645 +0200\n\nconfigure: update for LLVM 12.0 (#1747)\n\n"
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/2cfa1098070959413f5ed7c32220d9e55262e4e4",
+    "html_url": "https://github.com/ghdl/ghdl/commit/2cfa1098070959413f5ed7c32220d9e55262e4e4",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/2cfa1098070959413f5ed7c32220d9e55262e4e4/comments",
+    "author": {
+      "login": "vdkeybus",
+      "id": 6609823,
+      "node_id": "MDQ6VXNlcjY2MDk4MjM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6609823?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vdkeybus",
+      "html_url": "https://github.com/vdkeybus",
+      "followers_url": "https://api.github.com/users/vdkeybus/followers",
+      "following_url": "https://api.github.com/users/vdkeybus/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vdkeybus/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vdkeybus/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vdkeybus/subscriptions",
+      "organizations_url": "https://api.github.com/users/vdkeybus/orgs",
+      "repos_url": "https://api.github.com/users/vdkeybus/repos",
+      "events_url": "https://api.github.com/users/vdkeybus/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vdkeybus/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "396eb764f49666616063d4239df83b5aed961fff",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/396eb764f49666616063d4239df83b5aed961fff",
+        "html_url": "https://github.com/ghdl/ghdl/commit/396eb764f49666616063d4239df83b5aed961fff"
+      }
+    ]
+  },
+  {
+    "sha": "396eb764f49666616063d4239df83b5aed961fff",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6Mzk2ZWI3NjRmNDk2NjY2MTYwNjNkNDIzOWRmODNiNWFlZDk2MWZmZg==",
+    "commit": {
+      "author": {
+        "name": "Jeroen Van den Keybus",
+        "email": "jeroen.vandenkeybus@gmail.com",
+        "date": "2021-04-26T18:17:40Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-27T04:08:17Z"
+      },
+      "message": "Migrate deprecated DebugLoc::get to DILocation::get",
+      "tree": {
+        "sha": "001ba9e759a4eb59226c253a2a34ebe3d78a9cea",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/001ba9e759a4eb59226c253a2a34ebe3d78a9cea"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/396eb764f49666616063d4239df83b5aed961fff",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/396eb764f49666616063d4239df83b5aed961fff",
+    "html_url": "https://github.com/ghdl/ghdl/commit/396eb764f49666616063d4239df83b5aed961fff",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/396eb764f49666616063d4239df83b5aed961fff/comments",
+    "author": {
+      "login": "vdkeybus",
+      "id": 6609823,
+      "node_id": "MDQ6VXNlcjY2MDk4MjM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6609823?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vdkeybus",
+      "html_url": "https://github.com/vdkeybus",
+      "followers_url": "https://api.github.com/users/vdkeybus/followers",
+      "following_url": "https://api.github.com/users/vdkeybus/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vdkeybus/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vdkeybus/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vdkeybus/subscriptions",
+      "organizations_url": "https://api.github.com/users/vdkeybus/orgs",
+      "repos_url": "https://api.github.com/users/vdkeybus/repos",
+      "events_url": "https://api.github.com/users/vdkeybus/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vdkeybus/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+        "html_url": "https://github.com/ghdl/ghdl/commit/fcd93aa12cff63570409fbaede572d7eee2e8fa8"
+      }
+    ]
+  },
+  {
+    "sha": "fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZmNkOTNhYTEyY2ZmNjM1NzA0MDlmYmFlZGU1NzJkN2VlZTJlOGZhOA==",
+    "commit": {
+      "author": {
+        "name": "Xiretza",
+        "email": "xiretza@xiretza.xyz",
+        "date": "2021-04-26T10:43:56Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-26T14:30:41Z"
+      },
+      "message": "pyGHDL: update formatting to black 21.4",
+      "tree": {
+        "sha": "534fed97f08ab6895763a9ca9d803972123020fd",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/534fed97f08ab6895763a9ca9d803972123020fd"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+    "html_url": "https://github.com/ghdl/ghdl/commit/fcd93aa12cff63570409fbaede572d7eee2e8fa8",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/fcd93aa12cff63570409fbaede572d7eee2e8fa8/comments",
+    "author": {
+      "login": "Xiretza",
+      "id": 3107142,
+      "node_id": "MDQ6VXNlcjMxMDcxNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3107142?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiretza",
+      "html_url": "https://github.com/Xiretza",
+      "followers_url": "https://api.github.com/users/Xiretza/followers",
+      "following_url": "https://api.github.com/users/Xiretza/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiretza/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiretza/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiretza/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiretza/orgs",
+      "repos_url": "https://api.github.com/users/Xiretza/repos",
+      "events_url": "https://api.github.com/users/Xiretza/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiretza/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+        "html_url": "https://github.com/ghdl/ghdl/commit/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee"
+      }
+    ]
+  },
+  {
+    "sha": "5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NWM2YjJlYjdiZjY2MzNhOGU4MGQzOWRiY2MwMjRhNDY2ZmNhMjllZQ==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-25T22:29:36Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-26T14:29:32Z"
+      },
+      "message": "doc: temporarily pin docutils to 0.16, due to theme compatibility issues (readthedocs/sphinx_rtd_theme#1115)",
+      "tree": {
+        "sha": "d08d11ded319f7423d4710d2e7537cac937c975c",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/d08d11ded319f7423d4710d2e7537cac937c975c"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+    "html_url": "https://github.com/ghdl/ghdl/commit/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/5c6b2eb7bf6633a8e80d39dbcc024a466fca29ee/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "287e808d5dc65165ceda5978976121938336f7c2",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/287e808d5dc65165ceda5978976121938336f7c2",
+        "html_url": "https://github.com/ghdl/ghdl/commit/287e808d5dc65165ceda5978976121938336f7c2"
+      }
+    ]
+  },
+  {
+    "sha": "287e808d5dc65165ceda5978976121938336f7c2",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6Mjg3ZTgwOGQ1ZGM2NTE2NWNlZGE1OTc4OTc2MTIxOTM4MzM2ZjdjMg==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-24T19:10:38Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-24T20:49:03Z"
+      },
+      "message": "ghw: rename define from '_GHWLIB_H_' to '_LIBGHW_H_'",
+      "tree": {
+        "sha": "fb9e11b0b73b58d89c2dda1fb680c739715b8257",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/fb9e11b0b73b58d89c2dda1fb680c739715b8257"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/287e808d5dc65165ceda5978976121938336f7c2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/287e808d5dc65165ceda5978976121938336f7c2",
+    "html_url": "https://github.com/ghdl/ghdl/commit/287e808d5dc65165ceda5978976121938336f7c2",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/287e808d5dc65165ceda5978976121938336f7c2/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+        "html_url": "https://github.com/ghdl/ghdl/commit/7ce1d1bc27999054c221fc9e97449fcb086e8e88"
+      }
+    ]
+  },
+  {
+    "sha": "7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6N2NlMWQxYmMyNzk5OTA1NGMyMjFmYzllOTc0NDlmY2IwODZlOGU4OA==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T21:22:46Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T23:59:37Z"
+      },
+      "message": "ghw: rename 'ghwlib' to 'libghw' (#1741)",
+      "tree": {
+        "sha": "1e7927ab1f9b93cc07c0c9cbaf88c959641fda37",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/1e7927ab1f9b93cc07c0c9cbaf88c959641fda37"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+    "html_url": "https://github.com/ghdl/ghdl/commit/7ce1d1bc27999054c221fc9e97449fcb086e8e88",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/7ce1d1bc27999054c221fc9e97449fcb086e8e88/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ce49befde5e95066ee34469e043a48d94423c53b",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/ce49befde5e95066ee34469e043a48d94423c53b",
+        "html_url": "https://github.com/ghdl/ghdl/commit/ce49befde5e95066ee34469e043a48d94423c53b"
+      }
+    ]
+  },
+  {
+    "sha": "ce49befde5e95066ee34469e043a48d94423c53b",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6Y2U0OWJlZmRlNWU5NTA2NmVlMzQ0NjllMDQzYTQ4ZDk0NDIzYzUzYg==",
+    "commit": {
+      "author": {
+        "name": "Xiretza",
+        "email": "xiretza@xiretza.xyz",
+        "date": "2021-04-23T18:59:04Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T23:59:37Z"
+      },
+      "message": "GHW: handle unbounded record subtypes (#1743) Fix #1740",
+      "tree": {
+        "sha": "caded57d16afffc86cb8f796c56939140e53707c",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/caded57d16afffc86cb8f796c56939140e53707c"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/ce49befde5e95066ee34469e043a48d94423c53b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/ce49befde5e95066ee34469e043a48d94423c53b",
+    "html_url": "https://github.com/ghdl/ghdl/commit/ce49befde5e95066ee34469e043a48d94423c53b",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/ce49befde5e95066ee34469e043a48d94423c53b/comments",
+    "author": {
+      "login": "Xiretza",
+      "id": 3107142,
+      "node_id": "MDQ6VXNlcjMxMDcxNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3107142?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Xiretza",
+      "html_url": "https://github.com/Xiretza",
+      "followers_url": "https://api.github.com/users/Xiretza/followers",
+      "following_url": "https://api.github.com/users/Xiretza/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Xiretza/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Xiretza/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Xiretza/subscriptions",
+      "organizations_url": "https://api.github.com/users/Xiretza/orgs",
+      "repos_url": "https://api.github.com/users/Xiretza/repos",
+      "events_url": "https://api.github.com/users/Xiretza/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Xiretza/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+        "html_url": "https://github.com/ghdl/ghdl/commit/76404f71df0f7c1037b190a3cf23bad84bc4c84b"
+      }
+    ]
+  },
+  {
+    "sha": "76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NzY0MDRmNzFkZjBmN2MxMDM3YjE5MGEzY2YyM2JhZDg0YmM0Yzg0Yg==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T00:37:19Z"
+      },
+      "committer": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T23:59:30Z"
+      },
+      "message": "testsuite/gna/issue668: use ghw_diff (#1740)",
+      "tree": {
+        "sha": "abf64faae59ddbb59d2dcbe199d99486889a59ed",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/abf64faae59ddbb59d2dcbe199d99486889a59ed"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+    "html_url": "https://github.com/ghdl/ghdl/commit/76404f71df0f7c1037b190a3cf23bad84bc4c84b",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/76404f71df0f7c1037b190a3cf23bad84bc4c84b/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "026006aec2f37328edc8540472920ef0fbc591b9",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/026006aec2f37328edc8540472920ef0fbc591b9",
+        "html_url": "https://github.com/ghdl/ghdl/commit/026006aec2f37328edc8540472920ef0fbc591b9"
+      }
+    ]
+  },
+  {
+    "sha": "026006aec2f37328edc8540472920ef0fbc591b9",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6MDI2MDA2YWVjMmYzNzMyOGVkYzg1NDA0NzI5MjBlZjBmYmM1OTFiOQ==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T15:46:37Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:40:50Z"
+      },
+      "message": "doc: add section about GHW",
+      "tree": {
+        "sha": "ddc3ebc9700922002024bcf1a70d199a4ca3b07f",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/ddc3ebc9700922002024bcf1a70d199a4ca3b07f"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/026006aec2f37328edc8540472920ef0fbc591b9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/026006aec2f37328edc8540472920ef0fbc591b9",
+    "html_url": "https://github.com/ghdl/ghdl/commit/026006aec2f37328edc8540472920ef0fbc591b9",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/026006aec2f37328edc8540472920ef0fbc591b9/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+        "html_url": "https://github.com/ghdl/ghdl/commit/e95c49da51e3be6e1d4022eb30934970bcd0bd94"
+      }
+    ]
+  },
+  {
+    "sha": "e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZTk1YzQ5ZGE1MWUzYmU2ZTFkNDAyMmViMzA5MzQ5NzBiY2QwYmQ5NA==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T03:04:13Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:40:50Z"
+      },
+      "message": "Makefile: build and install ghwlib shared library",
+      "tree": {
+        "sha": "024407015065f03fca090057e416ce9d508ad527",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/024407015065f03fca090057e416ce9d508ad527"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+    "html_url": "https://github.com/ghdl/ghdl/commit/e95c49da51e3be6e1d4022eb30934970bcd0bd94",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/e95c49da51e3be6e1d4022eb30934970bcd0bd94/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1d527b1353cd51d5c763b58382746be6b3531e08",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/1d527b1353cd51d5c763b58382746be6b3531e08",
+        "html_url": "https://github.com/ghdl/ghdl/commit/1d527b1353cd51d5c763b58382746be6b3531e08"
+      }
+    ]
+  },
+  {
+    "sha": "1d527b1353cd51d5c763b58382746be6b3531e08",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6MWQ1MjdiMTM1M2NkNTFkNWM3NjNiNTgzODI3NDZiZTZiMzUzMWUwOA==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T13:37:37Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:40:50Z"
+      },
+      "message": "ghw: run GNU indent",
+      "tree": {
+        "sha": "9cc91de635d9a67f77137da96d7ad570f19673a3",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/9cc91de635d9a67f77137da96d7ad570f19673a3"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/1d527b1353cd51d5c763b58382746be6b3531e08",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/1d527b1353cd51d5c763b58382746be6b3531e08",
+    "html_url": "https://github.com/ghdl/ghdl/commit/1d527b1353cd51d5c763b58382746be6b3531e08",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/1d527b1353cd51d5c763b58382746be6b3531e08/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+        "html_url": "https://github.com/ghdl/ghdl/commit/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2"
+      }
+    ]
+  },
+  {
+    "sha": "b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6YjlmNWI5YjI4OTk0ZDA1YTU2ZmY0Y2MyNzIxYzBjM2VmZTZhMjdjMg==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T12:27:42Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:40:50Z"
+      },
+      "message": "ghw: adjust license headers",
+      "tree": {
+        "sha": "8a0205f435239b90219f49b83b2550a4cb1ab55f",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/8a0205f435239b90219f49b83b2550a4cb1ab55f"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+    "html_url": "https://github.com/ghdl/ghdl/commit/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/b9f5b9b28994d05a56ff4cc2721c0c3efe6a27c2/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+        "html_url": "https://github.com/ghdl/ghdl/commit/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf"
+      }
+    ]
+  },
+  {
+    "sha": "f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6ZjkwZjVhMGRiM2VhYzE1ZmE1YjQ0NDYxY2Y1YTU1YzBlNzBjNDJiZg==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-23T16:52:03Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:38:47Z"
+      },
+      "message": "testsuite/testenv: clarify when to use elab_simulate",
+      "tree": {
+        "sha": "c8d9818caa60ba1f8e2835407bacb4fd1bdb5dae",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/c8d9818caa60ba1f8e2835407bacb4fd1bdb5dae"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+    "html_url": "https://github.com/ghdl/ghdl/commit/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/f90f5a0db3eac15fa5b44461cf5a55c0e70c42bf/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+        "html_url": "https://github.com/ghdl/ghdl/commit/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88"
+      }
+    ]
+  },
+  {
+    "sha": "1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6MWVmNTQ4ZGVhNmFkOGY4ZTJiNDQ1ZGM5NmZlOWVjYTFlNWJjYWM4OA==",
+    "commit": {
+      "author": {
+        "name": "umarcor",
+        "email": "unai.martinezcorral@ehu.eus",
+        "date": "2021-04-22T23:42:48Z"
+      },
+      "committer": {
+        "name": "tgingold",
+        "email": "tgingold@users.noreply.github.com",
+        "date": "2021-04-23T18:38:47Z"
+      },
+      "message": "testsuite/gna: cleanup ghw related issues",
+      "tree": {
+        "sha": "79dc323fc1dc3862ef71bcbabfe2d45552e5688b",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/79dc323fc1dc3862ef71bcbabfe2d45552e5688b"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+    "html_url": "https://github.com/ghdl/ghdl/commit/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/1ef548dea6ad8f8e2b445dc96fe9eca1e5bcac88/comments",
+    "author": {
+      "login": "umarcor",
+      "id": 38422348,
+      "node_id": "MDQ6VXNlcjM4NDIyMzQ4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38422348?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/umarcor",
+      "html_url": "https://github.com/umarcor",
+      "followers_url": "https://api.github.com/users/umarcor/followers",
+      "following_url": "https://api.github.com/users/umarcor/following{/other_user}",
+      "gists_url": "https://api.github.com/users/umarcor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/umarcor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/umarcor/subscriptions",
+      "organizations_url": "https://api.github.com/users/umarcor/orgs",
+      "repos_url": "https://api.github.com/users/umarcor/repos",
+      "events_url": "https://api.github.com/users/umarcor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/umarcor/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+        "html_url": "https://github.com/ghdl/ghdl/commit/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91"
+      }
+    ]
+  },
+  {
+    "sha": "4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6NGExMWY0MWU2N2FkYjY3ZjdiMjlhNDQ5MmNhM2EyYjhkZGVmMmI5MQ==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-23T16:52:15Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-23T16:52:37Z"
+      },
+      "message": "testsuite/synth: add a test for #1734",
+      "tree": {
+        "sha": "1bf467ece7c034b2eaadfbb3ac3138eab40e3f36",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/1bf467ece7c034b2eaadfbb3ac3138eab40e3f36"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+    "html_url": "https://github.com/ghdl/ghdl/commit/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/4a11f41e67adb67f7b29a4492ca3a2b8ddef2b91/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+        "html_url": "https://github.com/ghdl/ghdl/commit/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe"
+      }
+    ]
+  },
+  {
+    "sha": "386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+    "node_id": "MDY6Q29tbWl0NDY0Mzk0NDY6Mzg2ZDU1NzBiN2E0YzhlNmM4OWY5MmE5Y2U2ODU0ZDA0ZGYwN2JiZQ==",
+    "commit": {
+      "author": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-23T16:51:43Z"
+      },
+      "committer": {
+        "name": "Tristan Gingold",
+        "email": "tgingold@free.fr",
+        "date": "2021-04-23T16:52:37Z"
+      },
+      "message": "synth-insts.adb: avoid a crash after an error during instantiation.  Fix #1734",
+      "tree": {
+        "sha": "f130ec529beeccee74f131e02001dc1344e7a5b8",
+        "url": "https://api.github.com/repos/ghdl/ghdl/git/trees/f130ec529beeccee74f131e02001dc1344e7a5b8"
+      },
+      "url": "https://api.github.com/repos/ghdl/ghdl/git/commits/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ghdl/ghdl/commits/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+    "html_url": "https://github.com/ghdl/ghdl/commit/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe",
+    "comments_url": "https://api.github.com/repos/ghdl/ghdl/commits/386d5570b7a4c8e6c89f92a9ce6854d04df07bbe/comments",
+    "author": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tgingold",
+      "id": 13433645,
+      "node_id": "MDQ6VXNlcjEzNDMzNjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13433645?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tgingold",
+      "html_url": "https://github.com/tgingold",
+      "followers_url": "https://api.github.com/users/tgingold/followers",
+      "following_url": "https://api.github.com/users/tgingold/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tgingold/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tgingold/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tgingold/subscriptions",
+      "organizations_url": "https://api.github.com/users/tgingold/orgs",
+      "repos_url": "https://api.github.com/users/tgingold/repos",
+      "events_url": "https://api.github.com/users/tgingold/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tgingold/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d79fa58f7efc06a048adf9e2172792e64b8abb20",
+        "url": "https://api.github.com/repos/ghdl/ghdl/commits/d79fa58f7efc06a048adf9e2172792e64b8abb20",
+        "html_url": "https://github.com/ghdl/ghdl/commit/d79fa58f7efc06a048adf9e2172792e64b8abb20"
+      }
+    ]
+  }
+]
