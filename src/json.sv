@@ -34,6 +34,11 @@ package json;
 		extern function automatic bit isTrue();
 	endclass
 
+	class Null extends Object;
+		/* Methods */
+		extern function new();
+	endclass
+
 
 	function Object::new (
 		input string r_str
@@ -60,5 +65,9 @@ package json;
 	function automatic bit Boolean::isTrue();
 		return m_bool;
 	endfunction
+
+	function Null::new();
+		super.new();
+	endfunction;
 
 endpackage
