@@ -39,6 +39,16 @@ package json;
 		extern function new();
 	endclass
 
+	class Number extends Object;
+		/* Attributes */
+		local real m_number;
+
+		/* Methods */
+		extern function new (
+			input real num = 0.0
+		);
+	endclass
+
 
 	function Object::new (
 		input string r_str
@@ -68,6 +78,13 @@ package json;
 
 	function Null::new();
 		super.new();
-	endfunction;
+	endfunction
+
+	function Number::new (
+		input real num
+	);
+		super.new();
+		m_number = num;
+	endfunction
 
 endpackage

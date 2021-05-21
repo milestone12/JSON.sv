@@ -5,10 +5,12 @@ module json_tb;
 	function automatic void f_create();
 		Array a;
 		Boolean b;
-		Null n;
+		Null nul;
+		Number num;
 		a = Array::new();
 		b = Boolean::new(1);
-		n = Null::new();
+		nul = Null::new();
+		num = Number::new(42.0);
 		$display("");
 	endfunction
 
