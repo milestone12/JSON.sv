@@ -5,7 +5,9 @@ package json;
 		local Object m_Elements[string];
 
 		/* Methods */
-		extern function new;
+		extern function new (
+			input string r_str = ""
+		);
 
 		extern virtual function automatic bit isTrue();
 	endclass
@@ -22,7 +24,9 @@ package json;
 	endclass
 
 
-	function Object::new;
+	function Object::new (
+		input string r_str
+	);
 	endfunction
 
 	function automatic bit Object::isTrue();
