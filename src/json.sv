@@ -12,7 +12,18 @@ package json;
 		extern virtual function automatic bit isTrue();
 	endclass
 
+	class Array extends Object;
+		/* Attributes */
+		local Object m_Elements[$];
+		
+		/* Methods */
+		extern function new (
+			input string r_str = ""
+		);
+	endclass
+
 	class Boolean extends Object;
+		/* Attributes */
 		local bit m_bool;
 
 		/* Methods */
@@ -31,6 +42,12 @@ package json;
 
 	function automatic bit Object::isTrue();
 		return 0;
+	endfunction
+
+	function Array::new (
+		input string r_str = ""
+	);
+		super.new();
 	endfunction
 
 	function Boolean::new(

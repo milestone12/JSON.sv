@@ -3,11 +3,11 @@ module json_tb;
 	import json::*;
 
 	function automatic void f_create();
-		Boolean o;
-		bit b;
-		o = Boolean::new(1);
-		b = o.isTrue();
-		$display("true: %b", b);
+		Array a;
+		Boolean b;
+		a = Array::new();
+		b = Boolean::new(1);
+		$display("");
 	endfunction
 
 	initial
