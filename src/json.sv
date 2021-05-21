@@ -49,6 +49,16 @@ package json;
 		);
 	endclass
 
+	class String extends Object;
+		/* Attributes */
+		local string m_string;
+
+		/* Methods */
+		extern function new (
+			input string s = ""
+		);
+	endclass
+
 
 	function Object::new (
 		input string r_str
@@ -85,6 +95,13 @@ package json;
 	);
 		super.new();
 		m_number = num;
+	endfunction
+
+	function String::new (
+		input string s
+	);
+		super.new();
+		m_string = s;
 	endfunction
 
 endpackage
