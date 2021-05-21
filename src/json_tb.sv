@@ -2,11 +2,12 @@ module json_tb;
 
 	import json::*;
 
-	function automatic f_create();
-		automatic Object o;
-		automatic Boolean b;
-		b = Boolean::new();
-		o = b;
+	function automatic void f_create();
+		Boolean o;
+		bit b;
+		o = Boolean::new(1);
+		b = o.isTrue();
+		$display("true: %b", b);
 	endfunction
 
 	initial
