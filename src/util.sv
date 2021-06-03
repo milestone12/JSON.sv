@@ -22,6 +22,11 @@ package util;
 			int unsigned n_len = 0
 		);
 
+		extern function automatic void append (
+			input string       s,
+			input int unsigned n = 1
+		);
+
 		extern function automatic int find (
 			input string       s,
 			input int unsigned n_start = 0
@@ -70,6 +75,15 @@ package util;
 		end
 		s_o = new(s);
 		return s_o;
+	endfunction
+
+	function automatic void String::append (
+		input string       s,
+		input int unsigned n
+	);
+		for (int unsigned i = 0; i < n; ++i) begin
+			m_string = {m_string, s};
+		end
 	endfunction
 
 	function automatic int String::find (

@@ -3,6 +3,7 @@ package json;
 	class Object;
 		/* Attributes */
 		local Object m_Elements[string];
+		protected static int unsigned n_dump_depth = 0;
 
 		/* Methods */
 		extern function new ();
@@ -14,6 +15,10 @@ package json;
 		extern function automatic void append (
 			input string key,
 			input Object elem
+		);
+
+		extern function automatic void delete (
+			input string key
 		);
 
 		extern virtual protected function automatic void fromString (
@@ -45,6 +50,10 @@ package json;
 		extern virtual function automatic int unsigned size();
 		extern virtual function automatic string asString();
 		extern virtual function automatic real asReal();
+
+		extern virtual function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	class Array extends Object;
@@ -58,6 +67,14 @@ package json;
 			ref util::String r_str
 		);
 
+		extern function automatic void append (
+			input Object elem
+		);
+
+		extern function automatic void delete (
+			input int unsigned index
+		);
+
 		extern virtual protected function automatic bit parseElement (
 			ref util::String r_str
 		);
@@ -68,6 +85,10 @@ package json;
 
 		extern virtual function automatic bit isArray();
 		extern virtual function automatic int unsigned size();
+
+		extern local function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	class Boolean extends Object;
@@ -80,6 +101,10 @@ package json;
 		);
 
 		extern function automatic bit isTrue();
+
+		extern local function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	class Null extends Object;
@@ -87,6 +112,10 @@ package json;
 		extern function new();
 
 		extern virtual function automatic bit isNull();
+
+		extern local function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	class Number extends Object;
@@ -99,6 +128,10 @@ package json;
 		);
 
 		extern virtual function automatic real asReal();
+
+		extern local function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	class String extends Object;
@@ -111,6 +144,10 @@ package json;
 		);
 
 		extern virtual function automatic string asString();
+
+		extern local function automatic void dumpS(
+			ref util::String r_str
+		);
 	endclass
 
 	function automatic Object LoadS (
@@ -161,6 +198,14 @@ package json;
 		input Object elem
 	);
 		m_Elements[key] = elem;
+	endfunction
+
+	function automatic void Object::delete (
+		input string key
+	);
+		if (m_Elements.exists(key)) begin
+			m_Elements.delete(key);
+		end
 	endfunction
 
 	function automatic void Object::fromString (
@@ -316,6 +361,39 @@ package json;
 		return 0.0;
 	endfunction
 
+	function automatic void Object::dumpS(
+		ref util::String r_str
+	);
+		r_str.append("{\n");
+		n_dump_depth++;
+
+		if (m_Elements.size()) begin
+			Object o;
+			string i, l;
+			m_Elements.first(i);
+			m_Elements.last(l);
+			do begin
+				r_str.append("\t", n_dump_depth);
+				r_str.append("\"");
+				r_str.append(i);
+				r_str.append("\": ");
+				o = m_Elements[i];
+				o.dumpS(r_str);
+				m_Elements.next(i);
+
+				if (i != l) begin
+					r_str.append(",\n");
+				end else begin
+					r_str.append("\n");
+				end
+			end while (i != l);
+		end
+
+		n_dump_depth--;
+		r_str.append("\t", n_dump_depth);
+		r_str.append("}");
+	endfunction
+
 	function Array::new ();
 		super.new();
 	endfunction
@@ -328,6 +406,20 @@ package json;
 		a.fromString(r_str);
 
 		return a;
+	endfunction
+
+	function automatic void Array::append (
+		input Object elem
+	);
+		m_Elements.push_back(elem);
+	endfunction
+
+	function automatic void Array::delete (
+		input int unsigned index
+	);
+		if (index < m_Elements.size()) begin
+			m_Elements.delete(index);
+		end
 	endfunction
 
 	function automatic bit Array::parseElement (
@@ -362,6 +454,31 @@ package json;
 		return m_Elements.size();
 	endfunction
 
+	function automatic void Array::dumpS(
+		ref util::String r_str
+	);
+		r_str.append("[\n");
+		n_dump_depth++;
+
+		for (int unsigned i = 0; i < m_Elements.size(); ++i) begin
+			Object o;
+
+			r_str.append("\t", n_dump_depth);
+			o = m_Elements[i];
+			o.dumpS(r_str);
+
+			if (i < (m_Elements.size() - 1)) begin
+				r_str.append(",\n");
+			end else begin
+				r_str.append("\n");
+			end
+		end
+
+		n_dump_depth--;
+		r_str.append("\t", n_dump_depth);
+		r_str.append("]");
+	endfunction
+
 	function Boolean::new(
 		input bit b
 	);
@@ -373,12 +490,28 @@ package json;
 		return m_bool;
 	endfunction
 
+	function automatic void Boolean::dumpS(
+		ref util::String r_str
+	);
+		if (m_bool) begin
+			r_str.append("true");
+		end else begin
+			r_str.append("false");
+		end
+	endfunction
+
 	function Null::new();
 		super.new();
 	endfunction
 
 	function automatic bit Null::isNull();
 		return 1;
+	endfunction
+
+	function automatic void Null::dumpS(
+		ref util::String r_str
+	);
+		r_str.append("null");
 	endfunction
 
 	function Number::new (
@@ -392,6 +525,14 @@ package json;
 		return m_number;
 	endfunction
 
+	function automatic void Number::dumpS(
+		ref util::String r_str
+	);
+		string s;
+		s.realtoa(m_number);
+		r_str.append(s);
+	endfunction
+
 	function String::new (
 		input string s
 	);
@@ -401,6 +542,14 @@ package json;
 
 	function automatic string String::asString();
 		return m_string;
+	endfunction
+
+	function automatic void String::dumpS(
+		ref util::String r_str
+	);
+		r_str.append("\"");
+		r_str.append(m_string);
+		r_str.append("\"");
 	endfunction
 
 endpackage
