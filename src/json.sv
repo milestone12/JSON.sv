@@ -32,6 +32,14 @@ package json;
 			ref util::String r_str
 		);
 
+		extern virtual function automatic Object getByKey (
+			input string key
+		);
+
+		extern virtual function automatic Object getByIndex (
+			input int unsigned index
+		);
+
 		extern virtual function automatic bit isTrue();
 	endclass
 
@@ -48,6 +56,10 @@ package json;
 
 		extern virtual protected function automatic bit parseElement (
 			ref util::String r_str
+		);
+
+		extern virtual function automatic Object getByIndex (
+			input int unsigned index
 		);
 	endclass
 
@@ -256,6 +268,21 @@ package json;
 		return o;
 	endfunction
 
+	function automatic Object Object::getByKey (
+		input string key
+	);
+		if (m_Elements.exists(key)) begin
+			return m_Elements[key];
+		end
+		return null;
+	endfunction
+
+	function automatic Object Object::getByIndex (
+		input int unsigned index
+	);
+		return null;
+	endfunction
+
 	function Array::new ();
 		super.new();
 	endfunction
@@ -284,6 +311,15 @@ package json;
 
 		return 1;
 	endfunction;
+
+	function automatic Object Array::getByIndex (
+		input int unsigned index
+	);
+		if (m_Elements.size()) begin
+			return m_Elements[index];
+		end
+		return null;
+	endfunction
 
 	function Boolean::new(
 		input bit b

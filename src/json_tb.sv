@@ -7,6 +7,7 @@ module json_tb;
 		int res;
 		string s, t;
 		Object root;
+		Object waehrung, inhaber, hobbys, golfen;
 
 		fd = $fopen("../../../src/json.json", "r");
 		if (!fd) begin
@@ -20,6 +21,11 @@ module json_tb;
 		$fclose(fd);
 
 		root = json::LoadS(util::String::new(s));
+
+		waehrung = root.getByKey("Waehrung");
+		inhaber = root.getByKey("Inhaber");
+		hobbys = inhaber.getByKey("Hobbys");
+		golfen = hobbys.getByIndex(1);
 
 		$display("");
 	endfunction
