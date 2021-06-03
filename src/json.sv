@@ -214,6 +214,9 @@ package json;
 		end else if (r_str.find("false") == 0) begin
 			Boolean b = new (0);
 			o = b;
+		end else if (r_str.find("null") == 0) begin
+			Null n = new ();
+			o = n;
 		end else if (r_str.find("\"") == 0) begin
 			String s;
 			n_stop = r_str.find("\"", 1);
