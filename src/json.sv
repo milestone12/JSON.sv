@@ -20,19 +20,19 @@ package json;
 			ref util::String r_str
 		);
 
+		extern virtual protected function automatic bit parseElement (
+			ref util::String r_str
+		);
+
+		extern protected function automatic string parseKey (
+			ref util::String r_str
+		);
+
+		extern protected function automatic Object parseObject (
+			ref util::String r_str
+		);
+
 		extern virtual function automatic bit isTrue();
-
-		extern local function automatic bit parseElement (
-			ref util::String r_str
-		);
-
-		extern local function automatic string parseKey (
-			ref util::String r_str
-		);
-
-		extern local function automatic Object parseObject (
-			ref util::String r_str
-		);
 	endclass
 
 	class Array extends Object;
@@ -43,6 +43,10 @@ package json;
 		extern function new ();
 
 		extern static function automatic Array Create (
+			ref util::String r_str
+		);
+
+		extern virtual protected function automatic bit parseElement (
 			ref util::String r_str
 		);
 	endclass
@@ -230,6 +234,11 @@ package json;
 			r_str = r_str.substr(1);
 			o = new();
 			o.fromString(r_str);
+		end else if (r_str.find("[") == 0) begin
+			Array a;
+			r_str = r_str.substr(1);
+			a = Array::Create(r_str);
+			o = a;
 		end else begin
 			return null;
 		end
@@ -251,12 +260,27 @@ package json;
 	function automatic Array Array::Create (
 		ref util::String r_str
 	);
-		Array a;
+		Array a = new();
 
-		a = new();
+		a.fromString(r_str);
 
 		return a;
 	endfunction
+
+	function automatic bit Array::parseElement (
+		ref util::String r_str
+	);
+		Object o;
+
+		o  = parseObject(r_str);
+		if (o != null) begin
+			m_Elements.push_back(o);
+		end else begin
+			return 0;
+		end
+
+		return 1;
+	endfunction;
 
 	function Boolean::new(
 		input bit b
