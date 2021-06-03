@@ -20,6 +20,11 @@ package util;
 			int unsigned n_len = 0
 		);
 
+		extern function automatic int find (
+			input string       s,
+			input int unsigned n_start = 0
+		);
+
 		extern function automatic int find_first_not_of (
 			input string s
 		);
@@ -55,6 +60,19 @@ package util;
 		end
 		s_o = new(s);
 		return s_o;
+	endfunction
+
+	function automatic int String::find (
+		input string       s,
+		input int unsigned n_start
+	);
+		for (int unsigned i = n_start; i < m_string.len() - s.len(); ++i) begin
+			if (m_string.substr(i, i + s.len() - 1) == s) begin
+				return i;
+			end
+		end
+
+		return -1;
 	endfunction
 
 	function automatic int String::find_first_not_of(
