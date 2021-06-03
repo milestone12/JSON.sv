@@ -1,15 +1,30 @@
 package json;
 
-	virtual class Object;
+	class Object;
 		/* Attributes */
 		local Object m_Elements[string];
 
 		/* Methods */
-		extern function new (
-			input string r_str = ""
+		extern function new ();
+
+		extern static function automatic Object Create (
+			ref util::String r_str
+		);
+
+		extern function automatic void append (
+			input string key,
+			input Object elem
+		);
+
+		extern virtual protected function automatic void fromString (
+			ref util::String r_str
 		);
 
 		extern virtual function automatic bit isTrue();
+
+		extern local function automatic bit parseElement (
+			ref util::String r_str
+		);
 	endclass
 
 	class Array extends Object;
@@ -17,8 +32,10 @@ package json;
 		local Object m_Elements[$];
 		
 		/* Methods */
-		extern function new (
-			input string r_str = ""
+		extern function new ();
+
+		extern static function automatic Array Create (
+			ref util::String r_str
 		);
 	endclass
 
@@ -59,20 +76,88 @@ package json;
 		);
 	endclass
 
-
-	function Object::new (
-		input string r_str
+	function automatic Object LoadS (
+		input util::String s
 	);
+		Object o;
+		int n_start;
+		string t;
+
+		n_start = s.find_first_not_of(" \t\n");
+
+		if (s.at(n_start) == "{") begin
+			s = s.substr(n_start + 1);
+		end else begin
+			s = s.substr(n_start);
+		end
+
+		o = Object::Create(s);
+		t = s.get();
+
+		return o;
+	endfunction
+
+
+	function Object::new ();
+	endfunction
+
+	function automatic Object Object::Create (
+		ref util::String r_str
+	);
+		Object o;
+
+		if (r_str.at(0) == "[") begin
+			Array a;
+			r_str = r_str.substr(1);
+			a = new();
+			o = a;
+		end else begin
+			o = new();
+			o.fromString(r_str);
+		end
+
+		return o;
+	endfunction
+
+	function automatic void Object::append (
+		input string key,
+		input Object elem
+	);
+		m_Elements[key] = elem;
+	endfunction
+
+	function automatic void Object::fromString (
+		ref util::String r_str
+	);
+		if (r_str != null) begin
+			while (parseElement(r_str)) begin
+			end
+		end
 	endfunction
 
 	function automatic bit Object::isTrue();
 		return 0;
 	endfunction
 
-	function Array::new (
-		input string r_str = ""
+	function automatic bit Object::parseElement (
+		ref util::String r_str
 	);
+		r_str = new("");
+		return 0;
+	endfunction;
+
+	function Array::new ();
 		super.new();
+	endfunction
+
+	function automatic Array Array::Create (
+		ref util::String r_str
+	);
+		Array a;
+
+		a = new();
+
+		return a;
 	endfunction
 
 	function Boolean::new(
