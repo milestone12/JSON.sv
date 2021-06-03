@@ -220,6 +220,10 @@ package json;
 			end
 			n = new(s.atoreal());
 			o = n;
+		end else if (r_str.find("{") == 0) begin
+			r_str = r_str.substr(1);
+			o = new();
+			o.fromString(r_str);
 		end else begin
 			return null;
 		end
