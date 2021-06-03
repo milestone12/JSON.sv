@@ -209,6 +209,17 @@ package json;
 			n_stop = r_str.find("\"", 1);
 			s = new (r_str.substr(1, n_stop - 1).get());
 			o = s;
+		end else if (r_str.find_first_of("+-0123456789.e") == 0) begin
+			Number n;
+			string s;
+			n_stop = r_str.find_first_not_of("+-0123456789.e");
+			if (n_stop < 0) begin
+				s = r_str.substr(0).get();
+			end else begin
+				s = r_str.substr(0, n_stop).get();
+			end
+			n = new(s.atoreal());
+			o = n;
 		end else begin
 			return null;
 		end
