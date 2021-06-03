@@ -29,6 +29,10 @@ package json;
 		extern local function automatic string parseKey (
 			ref util::String r_str
 		);
+
+		extern local function automatic Object parseObject (
+			ref util::String r_str
+		);
 	endclass
 
 	class Array extends Object;
@@ -149,8 +153,18 @@ package json;
 		Object o;
 		string key = parseKey(r_str);
 
-		r_str = new("");
-		return 0;
+		if (key.len() == 0) begin
+			return 0;
+		end
+
+		o  = parseObject(r_str);
+		if (o != null) begin
+			m_Elements[key] = o;
+		end else begin
+			return 0;
+		end
+
+		return 1;
 	endfunction;
 
 	function automatic string Object::parseKey (
@@ -178,6 +192,35 @@ package json;
 		r_str = r_str.substr(n_start);
 
 		return key.get();
+	endfunction
+
+	function automatic Object Object::parseObject (
+		ref util::String r_str
+	);
+		int n_start, n_stop;
+		Object o;
+
+		n_start = r_str.find_first_not_of(" \t\n");
+
+		r_str = r_str.substr(n_start);
+
+		if (r_str.find("\"") == 0) begin
+			String s;
+			n_stop = r_str.find("\"", 1);
+			s = new (r_str.substr(1, n_stop - 1).get());
+			o = s;
+		end else begin
+			return null;
+		end
+
+		n_start = r_str.find_first_of(",}]");
+		if (n_start < 0 && r_str.len()) begin
+			return null;
+		end
+
+		r_str = r_str.substr(n_start + 1);
+
+		return o;
 	endfunction
 
 	function Array::new ();
