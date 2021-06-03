@@ -9,6 +9,8 @@ package util;
 			input string s = ""
 		);
 
+		extern function automatic int unsigned len ();
+
 		extern function automatic string at (
 			int unsigned n
 		);
@@ -39,6 +41,10 @@ package util;
 		input string s
 	);
 		m_string = s;
+	endfunction
+
+	function automatic int unsigned String::len ();
+		return m_string.len();
 	endfunction
 
 	function automatic string String::at (
