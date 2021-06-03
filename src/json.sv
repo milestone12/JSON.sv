@@ -25,6 +25,10 @@ package json;
 		extern local function automatic bit parseElement (
 			ref util::String r_str
 		);
+
+		extern local function automatic string parseKey (
+			ref util::String r_str
+		);
 	endclass
 
 	class Array extends Object;
@@ -142,9 +146,39 @@ package json;
 	function automatic bit Object::parseElement (
 		ref util::String r_str
 	);
+		Object o;
+		string key = parseKey(r_str);
+
 		r_str = new("");
 		return 0;
 	endfunction;
+
+	function automatic string Object::parseKey (
+		ref util::String r_str
+	);
+		string s;
+		util::String key;
+		int n_start, n_stop;
+
+		n_start = r_str.find("\"");
+		if (n_start < 0) begin
+			return "";
+		end
+
+		n_stop = r_str.find("\"", (n_start + 1));
+		if (n_stop < 0) begin
+			return "";
+		end
+
+		n_start++;
+		key = r_str.substr(n_start, (n_stop - n_start));
+
+		n_start = r_str.find(":");
+		n_start++;
+		r_str = r_str.substr(n_start);
+
+		return key.get();
+	endfunction
 
 	function Array::new ();
 		super.new();
