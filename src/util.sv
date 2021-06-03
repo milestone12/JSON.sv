@@ -25,6 +25,10 @@ package util;
 			input int unsigned n_start = 0
 		);
 
+		extern function automatic int find_first_of (
+			input string s
+		);
+
 		extern function automatic int find_first_not_of (
 			input string s
 		);
@@ -75,6 +79,20 @@ package util;
 		return -1;
 	endfunction
 
+	function automatic int String::find_first_of(
+		input string s
+	);
+		for (int unsigned i = 0; i < m_string.len(); ++i) begin
+			for (int unsigned j = 0; j < s.len(); ++j) begin
+				if (m_string[i] == s[j]) begin
+					return i;
+				end
+			end
+		end
+
+		return -1;
+	endfunction
+
 	function automatic int String::find_first_not_of(
 		input string s
 	);
@@ -82,7 +100,7 @@ package util;
 			bit bMatch = 0;
 
 			for (int unsigned j = 0; j < s.len(); ++j) begin
-				if (m_string[i] == s[i]) begin
+				if (m_string[i] == s[j]) begin
 					bMatch = 1;
 					break;
 				end
