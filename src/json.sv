@@ -35,12 +35,16 @@ package json;
 		extern virtual function automatic Object getByKey (
 			input string key
 		);
-
 		extern virtual function automatic Object getByIndex (
 			input int unsigned index
 		);
 
+		extern virtual function automatic bit isArray();
 		extern virtual function automatic bit isTrue();
+		extern virtual function automatic bit isNull();
+		extern virtual function automatic int unsigned size();
+		extern virtual function automatic string asString();
+		extern virtual function automatic real asReal();
 	endclass
 
 	class Array extends Object;
@@ -61,6 +65,9 @@ package json;
 		extern virtual function automatic Object getByIndex (
 			input int unsigned index
 		);
+
+		extern virtual function automatic bit isArray();
+		extern virtual function automatic int unsigned size();
 	endclass
 
 	class Boolean extends Object;
@@ -78,6 +85,8 @@ package json;
 	class Null extends Object;
 		/* Methods */
 		extern function new();
+
+		extern virtual function automatic bit isNull();
 	endclass
 
 	class Number extends Object;
@@ -88,6 +97,8 @@ package json;
 		extern function new (
 			input real num = 0.0
 		);
+
+		extern virtual function automatic real asReal();
 	endclass
 
 	class String extends Object;
@@ -98,6 +109,8 @@ package json;
 		extern function new (
 			input string s = ""
 		);
+
+		extern virtual function automatic string asString();
 	endclass
 
 	function automatic Object LoadS (
@@ -157,10 +170,6 @@ package json;
 			while (parseElement(r_str)) begin
 			end
 		end
-	endfunction
-
-	function automatic bit Object::isTrue();
-		return 0;
 	endfunction
 
 	function automatic bit Object::parseElement (
@@ -283,6 +292,30 @@ package json;
 		return null;
 	endfunction
 
+	function automatic bit Object::isArray();
+		return 0;
+	endfunction
+
+	function automatic bit Object::isTrue();
+		return 0;
+	endfunction
+
+	function automatic bit Object::isNull();
+		return 0;
+	endfunction
+
+	function automatic int unsigned Object::size();
+		return 0;
+	endfunction
+
+	function automatic string Object::asString();
+		return "";
+	endfunction
+
+	function automatic real Object::asReal();
+		return 0.0;
+	endfunction
+
 	function Array::new ();
 		super.new();
 	endfunction
@@ -321,6 +354,14 @@ package json;
 		return null;
 	endfunction
 
+	function automatic bit Array::isArray();
+		return 1;
+	endfunction
+
+	function automatic int unsigned Array::size();
+		return m_Elements.size();
+	endfunction
+
 	function Boolean::new(
 		input bit b
 	);
@@ -336,6 +377,10 @@ package json;
 		super.new();
 	endfunction
 
+	function automatic bit Null::isNull();
+		return 1;
+	endfunction
+
 	function Number::new (
 		input real num
 	);
@@ -343,11 +388,19 @@ package json;
 		m_number = num;
 	endfunction
 
+	function automatic real Number::asReal();
+		return m_number;
+	endfunction
+
 	function String::new (
 		input string s
 	);
 		super.new();
 		m_string = s;
+	endfunction
+
+	function automatic string String::asString();
+		return m_string;
 	endfunction
 
 endpackage
