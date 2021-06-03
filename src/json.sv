@@ -204,7 +204,13 @@ package json;
 
 		r_str = r_str.substr(n_start);
 
-		if (r_str.find("\"") == 0) begin
+		if (r_str.find("true") == 0) begin
+			Boolean b = new (1);
+			o = b;
+		end else if (r_str.find("false") == 0) begin
+			Boolean b = new (0);
+			o = b;
+		end else if (r_str.find("\"") == 0) begin
 			String s;
 			n_stop = r_str.find("\"", 1);
 			s = new (r_str.substr(1, n_stop - 1).get());
