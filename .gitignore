@@ -1,1 +1,4 @@
 Debug
+build
+fusesoc.conf
+*.swp
