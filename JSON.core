@@ -16,7 +16,7 @@ CAPI=2:
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: ::JSON:0
+name: FPGA_Garage:util:JSON:0
 description: JSON library
 
 filesets:
@@ -28,6 +28,7 @@ filesets:
 
   tb:
     files:
+      - sv/json_test.sv
       - sv/json_tb.sv
     file_type: systemVerilogSource
 
