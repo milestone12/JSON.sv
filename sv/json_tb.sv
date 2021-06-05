@@ -1,3 +1,20 @@
+/*
+ * Copyright 2021 Alexander Preissner
+ * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
+ * 
+ * Licensed under the Solderpad Hardware License v 2.1 (the “License”);
+ * you may not use this file except in compliance with the License, or, at your
+ * option, the Apache License version 2.0.
+ * You may obtain a copy of the License at
+ * 
+ * https://solderpad.org/licenses/SHL-2.1/
+ * 
+ * Unless required by applicable law or agreed to in writing, any work
+ * distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 module json_tb;
 
 	import json::*;
@@ -11,7 +28,7 @@ module json_tb;
 		Object waehrung, inhaber, hobbys, golfen, o;
 		Array a;
 
-		fd = $fopen("../../../src/json.json", "r");
+		fd = $fopen("../../../json.json", "r");
 		if (!fd) begin
 			return;
 		end
@@ -46,7 +63,7 @@ module json_tb;
 
 		$display(r_str.get());
 
-		fd = $fopen("../../../src/json_out.json", "w");
+		fd = $fopen("./json_out.json", "w");
 		if (!fd) begin
 			return;
 		end
