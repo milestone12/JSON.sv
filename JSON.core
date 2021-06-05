@@ -22,13 +22,13 @@ description: JSON library
 filesets:
   pkg:
     files:
-      - util.sv
-      - json.sv
+      - sv/util.sv
+      - sv/json.sv
     file_type: systemVerilogSource
 
   tb:
     files:
-      - json_tb.sv
+      - sv/json_tb.sv
     file_type: systemVerilogSource
 
 
@@ -55,5 +55,11 @@ targets:
       xsim:
         xelab_options:
           - "--debug all"
-        xsim_options:
-          # - "--view ../../../cordic_tb.wcfg"
+
+# Uncomment the following lines to have FuseSoC fetch the library
+# from GitHub:
+# provider:
+#   name: github
+#   user: milestone12
+#   repo: JSON.sv
+#   version: master
