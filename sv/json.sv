@@ -71,6 +71,10 @@ package json;
 		extern virtual function automatic void dumpS(
 			ref util::String r_str
 		);
+
+		extern function automatic void dump (
+			input string file_path
+		);
 	endclass
 
 	class Array extends Object;
@@ -186,6 +190,30 @@ package json;
 		t = s.get();
 
 		return o;
+	endfunction
+
+	function automatic Object Load (
+		input string file_path
+	);
+		int fd;
+		int res;
+		string s, t;
+
+		/* Open the JSON-formatted text file */
+		fd = $fopen(file_path, "r");
+		if (!fd) begin
+			$error("Could not open file %s", file_path);
+			return null;
+		end
+
+		/* Read all lines in the text file into a string */
+		while (!$feof(fd)) begin
+			res = $fgets(t, fd);
+			s = {s, t};
+		end
+		$fclose(fd);
+
+		return LoadS(util::String::new(s));
 	endfunction
 
 
@@ -409,6 +437,25 @@ package json;
 		n_dump_depth--;
 		r_str.append("\t", n_dump_depth);
 		r_str.append("}");
+	endfunction
+
+	function automatic void Object::dump (
+		input string file_path
+	);
+		int fd;
+		util::String s = new();
+
+		/* Open the JSON output text file */
+		fd = $fopen(file_path, "w");
+		if (!fd) begin
+			$error("Could not open file %s", file_path);
+			return;
+		end
+
+		dumpS(s);
+		
+		$fwrite(fd, s.get());
+		$fclose(fd);
 	endfunction
 
 	function Array::new ();

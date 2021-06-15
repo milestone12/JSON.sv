@@ -31,21 +31,8 @@ program json_test;
 		Object waehrung, deckung, inhaber, hobbys, golfen, o;
 		Array a;
 
-		/* Open the JSON-formatted text file */
-		fd = $fopen("../../../json.json", "r");
-		if (!fd) begin
-			return;
-		end
-
-		/* Read all lines in the text file into a string */
-		while (!$feof(fd)) begin
-			res = $fgets(t, fd);
-			s = {s, t};
-		end
-		$fclose(fd);
-
-		/* Load the JSON object tree by parsing the JSON formatted string */
-		root = json::LoadS(util::String::new(s));
+		/* Load the JSON object tree from JSON formatted file */
+		root = json::Load("../../../json.json");
 
 		/* Dump the JSON string and print it as a log message */
 		r_str = new();
@@ -83,12 +70,7 @@ program json_test;
 		$display("%f", deckung.asReal());
 
 		/* Write the manipulated JSON object tree out to a file */
-		fd = $fopen("./json_out.json", "w");
-		if (!fd) begin
-			return;
-		end
-		$fwrite(fd, r_str.get());
-		$fclose(fd);
+		root.dump("./json_out.json");
 	endfunction
 
 	initial
