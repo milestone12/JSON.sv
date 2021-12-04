@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Alexander Preissner
+ * Copyright 2021 Alexander Preissner <fpga-garage@preissner-muc.de>
  * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
  *
  * Licensed under the Solderpad Hardware License v 2.1 (the “License”);

@@ -23,6 +23,14 @@ program json_test;
 
     `include "json.svh"
 
+    class CommandNameCallback extends Callback;
+        function automatic void apply (
+            Object cmd
+        );
+            $display("Command: %s", cmd.getByKey("command").asString());
+        endfunction
+    endclass : CommandNameCallback
+
 	function automatic void f_test_wikipedia();
 		int fd;
 		int res;
@@ -80,9 +88,11 @@ program json_test;
 
 	function automatic void f_test_cmd();
         util::String r_str;
-		Object root, first_cmd;
+		Array root;
+        Object first_cmd;
+        CommandNameCallback cb = new();
 
-		root = json::Load("../../../json/cmd.json");
+		root = Array'(json::Load("../../../json/cmd.json"));
         $display("Size: %d", root.size());
 
         first_cmd = root.getByIndex(0).getByKey("command");
@@ -90,6 +100,8 @@ program json_test;
         `foreach_object_in_array(cmd, root) begin
             $display("Command: %s", cmd.getByKey("command").asString());
         end
+
+        root.for_each(cb);
 
         r_str = new();
         root.dumpS(r_str);

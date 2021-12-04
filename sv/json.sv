@@ -17,6 +17,8 @@
  */
 package json;
 
+    `include "json.svh"
+
 	class Object;
 		/* Attributes */
 		local Object m_Elements[string];
@@ -92,6 +94,12 @@ package json;
         );
     endclass : Iterator
 
+    virtual class Callback;
+        pure virtual function automatic void apply(
+            Object r_obj
+        );
+    endclass : Callback
+
 	class Array extends Object;
 		/* Attributes */
 		local Object m_Elements[$];
@@ -122,11 +130,15 @@ package json;
 		extern virtual function automatic bit isArray();
 		extern virtual function automatic int unsigned size();
 
-		extern local function automatic void dumpS(
+		extern function automatic void dumpS(
 			ref util::String r_str
 		);
 
         extern function automatic Iterator it ();
+
+        extern function automatic void for_each(
+            Callback cb
+        );
 	endclass
 
 	class Boolean extends Object;
@@ -611,6 +623,14 @@ package json;
 
     function automatic Iterator Array::it ();
         it = new(this);
+    endfunction
+
+    function automatic void Array::for_each(
+        Callback cb
+    );
+        `foreach_object_in_array(o, this) begin
+            cb.apply(o);
+        end
     endfunction
 
 	function Boolean::new(
