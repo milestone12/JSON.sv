@@ -116,6 +116,8 @@ package json;
 	class Boolean extends Object;
 		/* Attributes */
 		local bit m_bool;
+        static string m_true = "true";
+        static string m_false = "false";
 
 		/* Methods */
 		extern function new(
@@ -130,6 +132,9 @@ package json;
 	endclass
 
 	class Null extends Object;
+        /* Attributes */
+        static string m_null = "null";
+
 		/* Methods */
 		extern function new();
 
@@ -324,20 +329,28 @@ package json;
 
 		r_str = r_str.substr(n_start);
 
-		if (r_str.find("true") == 0) begin
+		if (r_str.find(Boolean::m_true, 0, Boolean::m_true.len()) == 0) begin
 			Boolean b = new (1);
 			o = b;
-		end else if (r_str.find("false") == 0) begin
+            /* Consume string "true" */
+            r_str = r_str.substr(Boolean::m_true.len());
+		end else if (r_str.find(Boolean::m_false, 0, Boolean::m_false.len()) == 0) begin
 			Boolean b = new (0);
 			o = b;
-		end else if (r_str.find("null") == 0) begin
+            /* Consume string "false" */
+            r_str = r_str.substr(Boolean::m_false.len());
+		end else if (r_str.find(Null::m_null, 0, Null::m_null.len()) == 0) begin
 			Null n = new ();
 			o = n;
-		end else if (r_str.find("\"") == 0) begin
+            /* Consume string "null" including quotes */
+            r_str = r_str.substr(Null::m_null.len() + 2);
+		end else if (r_str.find("\"", 0, 1) == 0) begin
 			String s;
 			n_stop = r_str.find("\"", 1);
 			s = new (r_str.substr(1, n_stop - 1).get());
 			o = s;
+            /* Consume string including quotes */
+            r_str = r_str.substr(n_stop);
 		end else if (r_str.find_first_of("+-0123456789.e") == 0) begin
 			Number n;
 			string s;
@@ -349,11 +362,13 @@ package json;
 			end
 			n = new(s.atoreal());
 			o = n;
-		end else if (r_str.find("{") == 0) begin
+            /* Consume number */
+            r_str = r_str.substr(n_stop);
+		end else if (r_str.find("{", 0, 1) == 0) begin
 			r_str = r_str.substr(1);
 			o = new();
 			o.fromString(r_str);
-		end else if (r_str.find("[") == 0) begin
+		end else if (r_str.find("[", 0, 1) == 0) begin
 			Array a;
 			r_str = r_str.substr(1);
 			a = Array::Create(r_str);

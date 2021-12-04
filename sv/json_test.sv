@@ -89,7 +89,7 @@ program json_test;
 
 	initial
 	begin
-		// f_test_wikipedia();
+		f_test_wikipedia();
         f_test_cmd();
 	end
 
