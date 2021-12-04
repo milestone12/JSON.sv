@@ -28,7 +28,7 @@ program json_test;
 		* with some capabilitites that C++ STL strings have */
 		util::String r_str;
 		Object root;
-		Object waehrung, deckung, inhaber, hobbys, golfen, o;
+		Object waehrung, deckung, inhaber, alter, hobbys, golfen, o;
 		Array a;
 
 		/* Load the JSON object tree from JSON formatted file */
@@ -45,6 +45,7 @@ program json_test;
 		inhaber  = root.getByKey("Inhaber");
 		hobbys   = inhaber.getByKey("Hobbys");
 		golfen   = hobbys.getByIndex(1); /* Get array element by index */
+        alter    = inhaber.getByKey("Alter");
 
 		/* Object / tree manipulation examples */
 		root.delete("Nummer"); /* Delete child object */
@@ -68,6 +69,7 @@ program json_test;
 		$display("%d", a.size());
 		$display("%s", waehrung.asString());
 		$display("%f", deckung.asReal());
+        $display("Alter: %d", alter.asInt());
 
 		/* Write the manipulated JSON object tree out to a file */
 		root.dump("./json_out.json");

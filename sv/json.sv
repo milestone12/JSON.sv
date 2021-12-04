@@ -67,6 +67,7 @@ package json;
 		extern virtual function automatic bit isNull();
 		extern virtual function automatic int unsigned size();
 		extern virtual function automatic string asString();
+		extern virtual function automatic int asInt();
 		extern virtual function automatic real asReal();
 
 		extern virtual function automatic void dumpS(
@@ -153,6 +154,8 @@ package json;
 		extern function new (
 			input real num = 0.0
 		);
+
+		extern virtual function automatic int asInt();
 
 		extern virtual function automatic real asReal();
 
@@ -427,6 +430,10 @@ package json;
 		return "";
 	endfunction
 
+	function automatic int Object::asInt();
+		return 0;
+	endfunction
+
 	function automatic real Object::asReal();
 		return 0.0;
 	endfunction
@@ -607,6 +614,10 @@ package json;
 	);
 		super.new();
 		m_number = num;
+	endfunction
+
+	function automatic int Number::asInt();
+		return int'(m_number);
 	endfunction
 
 	function automatic real Number::asReal();
