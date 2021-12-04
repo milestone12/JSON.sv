@@ -79,6 +79,19 @@ package json;
 		);
 	endclass
 
+    class Iterator;
+        local Object       m_array;
+        local int unsigned m_i;
+
+        extern function new (
+            input Object arr
+        );
+
+        extern function automatic bit next(
+            ref Object r_obj
+        );
+    endclass : Iterator
+
 	class Array extends Object;
 		/* Attributes */
 		local Object m_Elements[$];
@@ -112,6 +125,8 @@ package json;
 		extern local function automatic void dumpS(
 			ref util::String r_str
 		);
+
+        extern function automatic Iterator it ();
 	endclass
 
 	class Boolean extends Object;
@@ -490,6 +505,26 @@ package json;
 		$fclose(fd);
 	endfunction
 
+    function Iterator::new(
+        input Object arr
+    );
+        m_array = arr;
+        m_i     = 0;
+    endfunction
+
+    function automatic bit Iterator::next(
+        ref Object r_obj
+    );
+        if (m_array.isArray() && m_i < m_array.size()) begin
+            r_obj = m_array.getByIndex(m_i);
+            m_i++;
+            return 1;
+        end else begin
+            r_obj = null;
+            return 0;
+        end
+    endfunction
+
 	function Array::new ();
 		super.new();
 	endfunction
@@ -573,6 +608,10 @@ package json;
 		r_str.append("\t", n_dump_depth);
 		r_str.append("]");
 	endfunction
+
+    function automatic Iterator Array::it ();
+        it = new(this);
+    endfunction
 
 	function Boolean::new(
 		input bit b

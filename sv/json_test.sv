@@ -15,10 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 program json_test;
 
 	/* Import JSON package to make the API available */
 	import json::*;
+
+    `include "json.svh"
 
 	function automatic void f_test_wikipedia();
 		int fd;
@@ -77,12 +80,16 @@ program json_test;
 
 	function automatic void f_test_cmd();
         util::String r_str;
-		Object root, first_cmd, cmd;
+		Object root, first_cmd;
 
 		root = json::Load("../../../json/cmd.json");
         $display("Size: %d", root.size());
 
         first_cmd = root.getByIndex(0).getByKey("command");
+
+        `foreach_object_in_array(cmd, root) begin
+            $display("Command: %s", cmd.getByKey("command").asString());
+        end
 
         r_str = new();
         root.dumpS(r_str);
