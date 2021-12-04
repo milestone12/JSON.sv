@@ -30,7 +30,6 @@ filesets:
 
   tb:
     files:
-      - sv/json_test.sv
       - sv/json_tb.sv
     file_type: systemVerilogSource
 
@@ -43,7 +42,7 @@ targets:
       - pkg
 
   # The "sim" target simulates the design. (It could have any name.)
-  sim:
+  sim: &sim
     # Copy all key/value pairs from the "default" target.
     <<: *default
     description: Simulate the design
@@ -58,6 +57,22 @@ targets:
       xsim:
         xelab_options:
           - "--debug all"
+          - "--lib uvm"
+
+  TestWikipediaExample:
+    <<: *sim
+    parameters:
+      - UVM_TESTNAME=TestWikipediaExample
+
+  TestCommandList:
+    <<: *sim
+    parameters:
+      - UVM_TESTNAME=TestCommandList
+
+parameters:
+  UVM_TESTNAME:
+    datatype: str
+    paramtype: plusarg
 
 # Uncomment the following lines to have FuseSoC fetch the library
 # from GitHub:

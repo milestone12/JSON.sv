@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Alexander Preissner
+ * Copyright 2021 Alexander Preissner <fpga-garage@preissner-muc.de>
  * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
  *
  * Licensed under the Solderpad Hardware License v 2.1 (the “License”);
@@ -410,7 +410,7 @@ package json;
 		n_elem_sep = r_str.find_first_of(",");
 		n_obj_close = r_str.find_first_of("}]");
         if (n_elem_sep < 0 && n_obj_close < 0) begin
-            return 0;
+            $fatal(1, "Input data is not valid JSON");
         end else if (n_elem_sep < 0 || n_obj_close < n_elem_sep) begin
             r_str = r_str.substr(n_obj_close + 1);
 			return 0;
