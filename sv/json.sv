@@ -50,8 +50,9 @@ package json;
 			ref util::String r_str
 		);
 
-		extern protected function automatic Object parseObject (
-			ref util::String r_str
+		extern protected function automatic bit parseObject (
+			ref util::String r_str,
+            ref Object       r_obj
 		);
 
 		extern virtual function automatic Object getByKey (
@@ -266,20 +267,19 @@ package json;
 		ref util::String r_str
 	);
 		Object o;
+        bit res;
 		string key = parseKey(r_str);
 
 		if (key.len() == 0) begin
 			return 0;
 		end
 
-		o  = parseObject(r_str);
+		res  = parseObject(r_str, o);
 		if (o != null) begin
 			m_Elements[key] = o;
-		end else begin
-			return 0;
 		end
 
-		return 1;
+		return res;
 	endfunction;
 
 	function automatic string Object::parseKey (
@@ -309,8 +309,9 @@ package json;
 		return key.get();
 	endfunction
 
-	function automatic Object Object::parseObject (
-		ref util::String r_str
+	function automatic bit Object::parseObject (
+		ref util::String r_str,
+        ref Object       r_obj
 	);
 		int n_start, n_stop;
 		Object o;
@@ -353,18 +354,17 @@ package json;
 			r_str = r_str.substr(1);
 			a = Array::Create(r_str);
 			o = a;
-		end else begin
-			return null;
 		end
 
 		n_start = r_str.find_first_of(",}]");
 		if (n_start < 0 && r_str.len()) begin
-			return null;
+			return 0;
 		end
+        r_obj = o;
 
 		r_str = r_str.substr(n_start + 1);
 
-		return o;
+		return 1;
 	endfunction
 
 	function automatic Object Object::getByKey (
@@ -490,15 +490,14 @@ package json;
 		ref util::String r_str
 	);
 		Object o;
+        bit res;
 
-		o  = parseObject(r_str);
+		res = parseObject(r_str, o);
 		if (o != null) begin
 			m_Elements.push_back(o);
-		end else begin
-			return 0;
 		end
 
-		return 1;
+		return res;
 	endfunction;
 
 	function automatic Object Array::getByIndex (
