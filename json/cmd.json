@@ -1,0 +1,18 @@
+[
+	{
+		"command": "CMD1",
+		"len": 6,
+		"data": [
+			"f5aa55aa55aa",
+			"cafeaffedead"
+		]
+	},
+	{
+		"command": "CMD2",
+		"len": 6,
+		"data": [
+			"cafeaffedead",
+			"55aa55aa55aa"
+		]
+	}
+]

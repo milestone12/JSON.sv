@@ -1,14 +1,14 @@
 /*
  * Copyright 2021 Alexander Preissner
  * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
- * 
+ *
  * Licensed under the Solderpad Hardware License v 2.1 (the “License”);
  * you may not use this file except in compliance with the License, or, at your
  * option, the Apache License version 2.0.
  * You may obtain a copy of the License at
- * 
+ *
  * https://solderpad.org/licenses/SHL-2.1/
- * 
+ *
  * Unless required by applicable law or agreed to in writing, any work
  * distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,7 +20,7 @@ program json_test;
 	/* Import JSON package to make the API available */
 	import json::*;
 
-	function automatic void f_create();
+	function automatic void f_test_wikipedia();
 		int fd;
 		int res;
 		string s, t;
@@ -73,9 +73,24 @@ program json_test;
 		root.dump("./json_out.json");
 	endfunction
 
+	function automatic void f_test_cmd();
+        util::String r_str;
+		Object root, first_cmd, cmd;
+
+		root = json::Load("../../../json/cmd.json");
+        $display("Size: %d", root.size());
+
+        first_cmd = root.getByIndex(0).getByKey("command");
+
+        r_str = new();
+        root.dumpS(r_str);
+        $display(r_str.get());
+	endfunction : f_test_cmd
+
 	initial
 	begin
-		f_create();
+		// f_test_wikipedia();
+        f_test_cmd();
 	end
 
 endprogram
