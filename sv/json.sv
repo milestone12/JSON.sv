@@ -473,24 +473,27 @@ package json;
 
 		if (m_Elements.size()) begin
 			Object o;
-			string i, l;
-			m_Elements.first(i);
-			m_Elements.last(l);
+			string i, next, last;
+			m_Elements.first(next);
+			m_Elements.last(last);
 			do begin
+                i = next;
+
 				r_str.append("\t", n_dump_depth);
 				r_str.append("\"");
 				r_str.append(i);
 				r_str.append("\": ");
 				o = m_Elements[i];
 				o.dumpS(r_str);
-				m_Elements.next(i);
 
-				if (i != l) begin
+				if (i != last) begin
 					r_str.append(",\n");
 				end else begin
 					r_str.append("\n");
 				end
-			end while (i != l);
+
+				m_Elements.next(next);
+			end while (i != last);
 		end
 
 		n_dump_depth--;
