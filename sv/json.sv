@@ -303,6 +303,9 @@ package json;
 		key = r_str.substr(n_start, (n_stop - n_start));
 
 		n_start = r_str.find(":");
+        if (n_start < 0) begin
+            return "";
+        end
 		n_start++;
 		r_str = r_str.substr(n_start);
 
