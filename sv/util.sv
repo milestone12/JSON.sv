@@ -1,14 +1,14 @@
 /*
  * Copyright 2021 Alexander Preissner
  * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
- * 
+ *
  * Licensed under the Solderpad Hardware License v 2.1 (the “License”);
  * you may not use this file except in compliance with the License, or, at your
  * option, the Apache License version 2.0.
  * You may obtain a copy of the License at
- * 
+ *
  * https://solderpad.org/licenses/SHL-2.1/
- * 
+ *
  * Unless required by applicable law or agreed to in writing, any work
  * distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -46,7 +46,8 @@ package util;
 
 		extern function automatic int find (
 			input string       s,
-			input int unsigned n_start = 0
+			input int unsigned n_start = 0,
+            input int unsigned n_end   = 0
 		);
 
 		extern function automatic int find_first_of (
@@ -105,9 +106,17 @@ package util;
 
 	function automatic int String::find (
 		input string       s,
-		input int unsigned n_start
+		input int unsigned n_start,
+        input int unsigned n_end
 	);
-		for (int unsigned i = n_start; i < m_string.len() - s.len(); ++i) begin
+        int n_top;
+
+        n_top = m_string.len() - s.len();
+        if (n_end > 0 && int'(n_end) < n_top) begin
+            n_top = int'(n_end);
+        end
+
+		for (int i = n_start; i < n_top; ++i) begin
 			if (m_string.substr(i, i + s.len() - 1) == s) begin
 				return i;
 			end
