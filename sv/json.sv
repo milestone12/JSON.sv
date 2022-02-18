@@ -1,14 +1,14 @@
 /*
  * Copyright 2021 Alexander Preissner
  * SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
- * 
+ *
  * Licensed under the Solderpad Hardware License v 2.1 (the “License”);
  * you may not use this file except in compliance with the License, or, at your
  * option, the Apache License version 2.0.
  * You may obtain a copy of the License at
- * 
+ *
  * https://solderpad.org/licenses/SHL-2.1/
- * 
+ *
  * Unless required by applicable law or agreed to in writing, any work
  * distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -80,7 +80,7 @@ package json;
 	class Array extends Object;
 		/* Attributes */
 		local Object m_Elements[$];
-		
+
 		/* Methods */
 		extern function new ();
 
@@ -228,7 +228,7 @@ package json;
 		if (r_str.at(0) == "[") begin
 			Array a;
 			r_str = r_str.substr(1);
-			a = new();
+			a = Array::Create(r_str);
 			o = a;
 		end else begin
 			o = new();
@@ -453,7 +453,7 @@ package json;
 		end
 
 		dumpS(s);
-		
+
 		$fwrite(fd, s.get());
 		$fclose(fd);
 	endfunction
