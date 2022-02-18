@@ -317,6 +317,7 @@ package json;
         ref Object       r_obj
 	);
 		int n_start, n_stop;
+        int n_obj_close, n_elem_sep;
 		Object o;
 
 		n_start = r_str.find_first_not_of(" \t\n");
@@ -359,15 +360,21 @@ package json;
 			o = a;
 		end
 
-		n_start = r_str.find_first_of(",}]");
-		if (n_start < 0 && r_str.len()) begin
-			return 0;
-		end
         r_obj = o;
 
-		r_str = r_str.substr(n_start + 1);
+		n_elem_sep = r_str.find_first_of(",");
+		n_obj_close = r_str.find_first_of("}]");
+        if (n_elem_sep < 0 && n_obj_close < 0) begin
+            return 0;
+        end else if (n_elem_sep < 0 || n_obj_close < n_elem_sep) begin
+            r_str = r_str.substr(n_obj_close + 1);
+			return 0;
+        end else begin
+            r_str = r_str.substr(n_elem_sep + 1);
+			return 1;
+		end
 
-		return 1;
+		return 0;
 	endfunction
 
 	function automatic Object Object::getByKey (
